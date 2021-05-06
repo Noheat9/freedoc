@@ -1,0 +1,426 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDoctors (20210506122514)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "doctors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "specialty" varchar, "zip_code" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506122514_create_doctors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506122514"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePatients (20210506122608)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "patients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506122608_create_patients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506122608"]]
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateAppointments (20210506122629)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506122629_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506122629"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-06 12:33:56.379005"], ["updated_at", "2021-05-06 12:33:56.379005"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mary A. Richman"], ["last_name", "Zeno of Elea"], ["zip_code", "27672"], ["created_at", "2021-05-06 13:38:59.860366"], ["updated_at", "2021-05-06 13:38:59.860366"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Caroyln"], ["last_name", "Terry"], ["created_at", "2021-05-06 13:38:59.873595"], ["updated_at", "2021-05-06 13:38:59.873595"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mabel Syrup"], ["last_name", "Chrysippus"], ["zip_code", "86995"], ["created_at", "2021-05-06 13:39:35.760459"], ["updated_at", "2021-05-06 13:39:35.760459"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Senaida"], ["last_name", "Roob"], ["created_at", "2021-05-06 13:39:35.769724"], ["updated_at", "2021-05-06 13:39:35.769724"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Minnie Skurt"], ["last_name", "Gorgias"], ["zip_code", "59914-2014"], ["created_at", "2021-05-06 13:40:05.477903"], ["updated_at", "2021-05-06 13:40:05.477903"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Eleonor"], ["last_name", "Pollich"], ["created_at", "2021-05-06 13:40:05.487573"], ["updated_at", "2021-05-06 13:40:05.487573"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sal Ami"], ["last_name", "Solon"], ["zip_code", "88466-7984"], ["created_at", "2021-05-06 13:41:43.245928"], ["updated_at", "2021-05-06 13:41:43.245928"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Rufina"], ["last_name", "Schaden"], ["created_at", "2021-05-06 13:41:43.256154"], ["updated_at", "2021-05-06 13:41:43.256154"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Biff Wellington"], ["last_name", "Solon"], ["zip_code", "71318-8854"], ["created_at", "2021-05-06 13:42:36.296653"], ["updated_at", "2021-05-06 13:42:36.296653"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Jone"], ["last_name", "Lynch"], ["created_at", "2021-05-06 13:42:36.306657"], ["updated_at", "2021-05-06 13:42:36.306657"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sally Mander"], ["last_name", "Archimedes"], ["zip_code", "00433-1355"], ["created_at", "2021-05-06 13:44:35.732621"], ["updated_at", "2021-05-06 13:44:35.732621"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Carlo"], ["last_name", "Vandervort"], ["created_at", "2021-05-06 13:44:35.742829"], ["updated_at", "2021-05-06 13:44:35.742829"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.2ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dee Major"], ["last_name", "Arcesilaus"], ["zip_code", "44412"], ["created_at", "2021-05-06 13:44:59.123555"], ["updated_at", "2021-05-06 13:44:59.123555"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Rhoda"], ["last_name", "Ortiz"], ["created_at", "2021-05-06 13:44:59.133866"], ["updated_at", "2021-05-06 13:44:59.133866"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jerry Atrics"], ["last_name", "Diogenes"], ["zip_code", "38945-1029"], ["created_at", "2021-05-06 13:47:15.760696"], ["updated_at", "2021-05-06 13:47:15.760696"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Ezequiel"], ["last_name", "Kozey"], ["created_at", "2021-05-06 13:47:15.770737"], ["updated_at", "2021-05-06 13:47:15.770737"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCities (20210506151934)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210506151934_create_cities.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506151934_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506151934"]]
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to RemoveSpecialtyFromDoctor (20210506153533)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adoctors" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "specialty" varchar DEFAULT NULL, "zip_code" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "adoctors" ("id","first_name","last_name","specialty","zip_code","created_at","updated_at")
+                     SELECT "id","first_name","last_name","specialty","zip_code","created_at","updated_at" FROM "doctors"[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "doctors"[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "doctors" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "zip_code" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "doctors" ("id","first_name","last_name","zip_code","created_at","updated_at")
+                     SELECT "id","first_name","last_name","zip_code","created_at","updated_at" FROM "adoctors"[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "adoctors"[0m
+  ↳ db/migrate/20210506153533_remove_specialty_from_doctor.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506153533"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSpecialties (20210506153858)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210506153858_create_specialties.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "specialties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "jobs" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210506153858_create_specialties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210506153858"]]
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mDoctor Load (0.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 1]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 2]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 3]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 4]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 5]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 6]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 7]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 8]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 4]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 5]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 6]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 7]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 8]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[36mSpecialty Load (0.1ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Emma Royds"], ["last_name", "Posidonius"], ["zip_code", "82743"], ["created_at", "2021-05-06 15:56:45.963457"], ["updated_at", "2021-05-06 15:56:45.963457"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Retail Engineer"], ["created_at", "2021-05-06 15:56:45.970279"], ["updated_at", "2021-05-06 15:56:45.970279"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Houston"], ["last_name", "Wunsch"], ["created_at", "2021-05-06 15:56:45.974947"], ["updated_at", "2021-05-06 15:56:45.974947"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Abuja"], ["created_at", "2021-05-06 15:56:45.980915"], ["updated_at", "2021-05-06 15:56:45.980915"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = ?[0m  [["id", 9]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Destroy (0.1ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpecialty Load (0.1ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Destroy (0.1ms)[0m  [1m[31mDELETE FROM "specialties" WHERE "specialties"."id" = ?[0m  [["id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Zeke N. Yeshallfind"], ["last_name", "Chrysippus"], ["zip_code", "59727-1478"], ["created_at", "2021-05-06 16:03:44.833286"], ["updated_at", "2021-05-06 16:03:44.833286"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Technology Producer"], ["created_at", "2021-05-06 16:03:44.838362"], ["updated_at", "2021-05-06 16:03:44.838362"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Cornell"], ["last_name", "Rogahn"], ["created_at", "2021-05-06 16:03:44.842291"], ["updated_at", "2021-05-06 16:03:44.842291"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ulaanbaatar"], ["created_at", "2021-05-06 16:03:44.846326"], ["updated_at", "2021-05-06 16:03:44.846326"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Adam Baum"], ["last_name", "Solon"], ["zip_code", "22132-7786"], ["created_at", "2021-05-06 16:03:44.850577"], ["updated_at", "2021-05-06 16:03:44.850577"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "International Administrator"], ["created_at", "2021-05-06 16:03:44.854752"], ["updated_at", "2021-05-06 16:03:44.854752"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Bill"], ["last_name", "Klocko"], ["created_at", "2021-05-06 16:03:44.858885"], ["updated_at", "2021-05-06 16:03:44.858885"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Paramaribo"], ["created_at", "2021-05-06 16:03:44.863727"], ["updated_at", "2021-05-06 16:03:44.863727"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Russell Sprout"], ["last_name", "Antisthenes"], ["zip_code", "10347"], ["created_at", "2021-05-06 16:03:44.868029"], ["updated_at", "2021-05-06 16:03:44.868029"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Corporate Education Coordinator"], ["created_at", "2021-05-06 16:03:44.872023"], ["updated_at", "2021-05-06 16:03:44.872023"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Eloy"], ["last_name", "Harber"], ["created_at", "2021-05-06 16:03:44.875955"], ["updated_at", "2021-05-06 16:03:44.875955"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Kinshasa"], ["created_at", "2021-05-06 16:03:44.879913"], ["updated_at", "2021-05-06 16:03:44.879913"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ed Jewcation"], ["last_name", "Anaxagoras"], ["zip_code", "72998-3865"], ["created_at", "2021-05-06 16:03:44.883858"], ["updated_at", "2021-05-06 16:03:44.883858"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Senior Associate"], ["created_at", "2021-05-06 16:03:44.887637"], ["updated_at", "2021-05-06 16:03:44.887637"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Sergio"], ["last_name", "Langworth"], ["created_at", "2021-05-06 16:03:44.891820"], ["updated_at", "2021-05-06 16:03:44.891820"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lisbon"], ["created_at", "2021-05-06 16:03:44.895922"], ["updated_at", "2021-05-06 16:03:44.895922"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Macon Paine"], ["last_name", "Chrysippus"], ["zip_code", "81694"], ["created_at", "2021-05-06 16:03:44.899996"], ["updated_at", "2021-05-06 16:03:44.899996"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Consulting Manager"], ["created_at", "2021-05-06 16:03:44.903958"], ["updated_at", "2021-05-06 16:03:44.903958"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Zina"], ["last_name", "Wintheiser"], ["created_at", "2021-05-06 16:03:44.907858"], ["updated_at", "2021-05-06 16:03:44.907858"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sao Tome"], ["created_at", "2021-05-06 16:03:44.911624"], ["updated_at", "2021-05-06 16:03:44.911624"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Chris Coe"], ["last_name", "Anaxagoras"], ["zip_code", "65579"], ["created_at", "2021-05-06 16:03:44.915635"], ["updated_at", "2021-05-06 16:03:44.915635"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Manufacturing Engineer"], ["created_at", "2021-05-06 16:03:44.919909"], ["updated_at", "2021-05-06 16:03:44.919909"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Nellie"], ["last_name", "Becker"], ["created_at", "2021-05-06 16:03:44.923908"], ["updated_at", "2021-05-06 16:03:44.923908"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tallinn"], ["created_at", "2021-05-06 16:03:44.927903"], ["updated_at", "2021-05-06 16:03:44.927903"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Iona Frisbee"], ["last_name", "Plutarch"], ["zip_code", "65460"], ["created_at", "2021-05-06 16:03:44.931883"], ["updated_at", "2021-05-06 16:03:44.931883"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Senior Accounting Director"], ["created_at", "2021-05-06 16:03:44.936032"], ["updated_at", "2021-05-06 16:03:44.936032"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Bruce"], ["last_name", "Schroeder"], ["created_at", "2021-05-06 16:03:44.940019"], ["updated_at", "2021-05-06 16:03:44.940019"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Paramaribo"], ["created_at", "2021-05-06 16:03:44.944005"], ["updated_at", "2021-05-06 16:03:44.944005"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Michelle Lynn"], ["last_name", "Hippocrates"], ["zip_code", "12067-6724"], ["created_at", "2021-05-06 16:03:44.948076"], ["updated_at", "2021-05-06 16:03:44.948076"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Corporate Education Producer"], ["created_at", "2021-05-06 16:03:44.952147"], ["updated_at", "2021-05-06 16:03:44.952147"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Sherman"], ["last_name", "Wunsch"], ["created_at", "2021-05-06 16:03:44.957611"], ["updated_at", "2021-05-06 16:03:44.957611"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Palikir"], ["created_at", "2021-05-06 16:03:44.961687"], ["updated_at", "2021-05-06 16:03:44.961687"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Jasmine Rice"], ["last_name", "Posidonius"], ["zip_code", "62342-3853"], ["created_at", "2021-05-06 16:03:44.965903"], ["updated_at", "2021-05-06 16:03:44.965903"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Legacy Supervisor"], ["created_at", "2021-05-06 16:03:44.970070"], ["updated_at", "2021-05-06 16:03:44.970070"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "David"], ["last_name", "Price"], ["created_at", "2021-05-06 16:03:44.973978"], ["updated_at", "2021-05-06 16:03:44.973978"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Santo Domingo"], ["created_at", "2021-05-06 16:03:44.977893"], ["updated_at", "2021-05-06 16:03:44.977893"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.1ms)[0m  [1m[32mINSERT INTO "doctors" ("first_name", "last_name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Myra Maines"], ["last_name", "Anaxagoras"], ["zip_code", "58864-4120"], ["created_at", "2021-05-06 16:03:44.982146"], ["updated_at", "2021-05-06 16:03:44.982146"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialty Create (0.1ms)[0m  [1m[32mINSERT INTO "specialties" ("jobs", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["jobs", "Legal Agent"], ["created_at", "2021-05-06 16:03:44.986425"], ["updated_at", "2021-05-06 16:03:44.986425"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Create (0.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Glenn"], ["last_name", "Ratke"], ["created_at", "2021-05-06 16:03:44.990722"], ["updated_at", "2021-05-06 16:03:44.990722"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCity Create (0.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bandar Seri Begawan"], ["created_at", "2021-05-06 16:03:44.994647"], ["updated_at", "2021-05-06 16:03:44.994647"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m

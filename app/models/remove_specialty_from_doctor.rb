@@ -1,0 +1,2 @@
+class RemoveSpecialtyFromDoctor < ApplicationRecord
+end
